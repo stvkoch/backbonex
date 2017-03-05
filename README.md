@@ -1,5 +1,9 @@
 #Backbonex
 
+
+[![Build Status](https://travis-ci.org/stvkoch/backbonex.svg?branch=master)](https://travis-ci.org/stvkoch/backbonex)
+
+
 Backbone -> Redux
 Redux -> Backbone
 
