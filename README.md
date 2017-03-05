@@ -10,7 +10,7 @@ Allow use your Models and Collections listen action and syncronize changes in a 
 ## Install
 
 ```
-yarn add backbux
+yarn add backbonex
 ```
 
 ## Usage
