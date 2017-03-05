@@ -1,4 +1,4 @@
-#DUX
+#Backbonex
 
 Backbone -> Redux
 Redux -> Backbone
@@ -30,23 +30,23 @@ If you desire you can createInitialState from current Backbone entities using `c
 
 
 ```
-import {createInitialState} from 'dux';
+import {createInitialState} from 'backbonex';
 const backboneState = createInitialState(backboneTree);
 ```
 
 ### 2# Create your store
 
 ```
-import dux from 'dux';
+import backbonex from 'backbonex';
 
-const duxCreateStore = dux(createStore, applyMiddleware);
+const duxCreateStore = backbonex(createStore, applyMiddleware);
 const store = duxCreateStore(backboneTree, backboneState, [...middlewares]);
 ```
 
 ### 3# Configure yours Models and Collections
 
 ```
-import {emitter} from 'dux';
+import {emitter} from 'backbonex';
 import {POST_CHANGE_ATTRIBUTES} from './actions/post';
 
 class Post extends Backbone.Model {

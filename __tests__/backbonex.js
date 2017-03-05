@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import sinon from 'sinon';
 
-import dux, {emitter, createInitialState} from './../src';
+import backbonex, {emitter, createInitialState} from './../src';
 import {createStore, applyMiddleware} from 'redux';
 
 import {backboneTree, backboneState} from './../__mocks__/backbone';
@@ -14,14 +14,14 @@ const logger = store => next => action => {
   return result
 }
 
-describe('dux', () => {
+describe('backbonex', () => {
   it('should be a function', function() {
-    expect(dux).to.be.a('function');
+    expect(backbonex).to.be.a('function');
   });
 
   it('should return store redux api', () => {
 
-    const store = dux(createStore, applyMiddleware)(backboneTree);
+    const store = backbonex(createStore, applyMiddleware)(backboneTree);
 
     const methods = Object.keys(store)
 
@@ -35,7 +35,7 @@ describe('dux', () => {
 
   it('should have same state of backbone', () => {
     const initialState = createInitialState(backboneTree);
-    const store = dux(createStore, applyMiddleware)(backboneTree, initialState);
+    const store = backbonex(createStore, applyMiddleware)(backboneTree, initialState);
 
     expect(initialState).to.be.not.empty;
     expect(store.getState()).to.be.deep.equal(initialState);
@@ -43,7 +43,7 @@ describe('dux', () => {
 
   it('should have reflect changes made on backbone', () => {
     const initialState = createInitialState(backboneTree);
-    const store = dux(createStore, applyMiddleware)(backboneTree, initialState);
+    const store = backbonex(createStore, applyMiddleware)(backboneTree, initialState);
 
     expect(initialState).to.be.not.empty;
     expect(store.getState()).to.be.deep.equal(initialState);
@@ -58,7 +58,7 @@ describe('dux', () => {
 
   it('should allow trigger backbone events using redux actions', () => {
     const initialState = createInitialState(backboneTree);
-    const store = dux(createStore, applyMiddleware)(
+    const store = backbonex(createStore, applyMiddleware)(
       backboneTree,
       initialState,
       [
