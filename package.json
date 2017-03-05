@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Backbone to Redux - Redux to Backbone",
   "main": "src/index.js",
+  "repository": "github.com/stvkoch/backbonex",
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch"
