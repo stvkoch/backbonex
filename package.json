@@ -4,11 +4,16 @@
   "description": "Backbone to Redux - Redux to Backbone",
   "main": "src/index.js",
   "repository": "github.com/stvkoch/backbonex",
+  "homepage": "github.com/stvkoch/backbonex",
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
   "author": "The Next Ad",
+  "contributors": [{
+    "name": "Steven Koch",
+    "email": "stvkoch@gmail.com"
+  }],
   "license": "ISC",
   "dependencies": {
     "clone-deep": "^0.2.4",
