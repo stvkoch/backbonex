@@ -14,7 +14,7 @@ Allow use your Models and Collections listen action and syncronize changes in a 
 ## Install
 
 ```
-yarn add backbonex
+npm install --save backbonex
 ```
 
 ## Usage
