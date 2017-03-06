@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 import cloneDeep from 'clone-deep';
 
-import {__ACTION_DUX_CROSS_BACKBONE__} from './create-actions';
+import {__ACTION_DUX_CROSS_BACKBONE__} from './action';
 
 /**
  */
@@ -9,7 +9,7 @@ export function reducer(state = {}, action = {}) {
   if (action.type === __ACTION_DUX_CROSS_BACKBONE__) {
     const newState = cloneDeep(state);
     // beware this is a shallow copy
-    return Object.assign({}, newState, {[action.entityName]: action.entity.toJSON()});
+    return Object.assign({}, newState, {[action.entityName]: action.entity});
   }
 
   return state;
