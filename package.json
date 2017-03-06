@@ -2,10 +2,11 @@
   "name": "backbonex",
   "version": "0.1.5",
   "description": "Backbone to Redux - Redux to Backbone",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": "github.com/stvkoch/backbonex",
   "homepage": "https://github.com/stvkoch/backbonex",
   "scripts": {
+    "build": "yarn test && babel src --out-dir dist",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
@@ -23,8 +24,11 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.23.0",
     "babel-jest": "^19.0.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
     "babel-preset-es2015": "^6.22.0",
     "backbone": "^1.3.3",
     "chai": "^3.5.0",
