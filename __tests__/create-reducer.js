@@ -3,7 +3,7 @@ import sinon from 'sinon';
 
 import createReducer from './../src/create-reducers';
 import createInitialState from './../src/create-initial-state';
-import {__ACTION_DUX_CROSS_BACKBONE__} from './../src/create-actions';
+import {__ACTION_DUX_CROSS_BACKBONE__} from './../src/action';
 
 import {backboneTree, backboneState} from './../__mocks__/backbone';
 import {ACTION_POST, ACTION_POSTS} from './../__mocks__/actions';
@@ -27,7 +27,7 @@ describe('createReducer', () => {
     const action = {
       type: __ACTION_DUX_CROSS_BACKBONE__,
       entityName: 'post',
-      entity: backboneTree.post
+      entity: backboneTree.post.toJSON()
     };
 
 

@@ -1,7 +1,8 @@
 import {expect} from 'chai';
 import sinon from 'sinon';
 
-import createActions, {__ACTION_DUX_CROSS_BACKBONE__} from './../src/create-actions';
+import createActions from './../src/create-actions';
+import {__ACTION_DUX_CROSS_BACKBONE__} from './../src/action';
 
 import {backboneTree, backboneState} from './../__mocks__/backbone';
 import {ACTION_POST, ACTION_POSTS} from './../__mocks__/actions';
@@ -26,7 +27,7 @@ describe('createActions', () => {
     expect(storeMock.dispatch.calledWith({
       type: __ACTION_DUX_CROSS_BACKBONE__,
       entityName: 'post',
-      entity: backboneTree.post
+      entity: backboneTree.post.toJSON()
     })).to.be.true;
 
   });

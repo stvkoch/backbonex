@@ -1,6 +1,6 @@
 import {emitter} from './create-middleware';
 
-export const __ACTION_DUX_CROSS_BACKBONE__ = 'ACTION_DUX_CROSS_BACKBONE';
+import updateState from './action';
 
 // backbone-redux
 export default function createActions(entities, store) {
@@ -9,11 +9,10 @@ export default function createActions(entities, store) {
 
     // event, callback, context
     entity.on('change', function() {
-      this.dispatch({
-        type: __ACTION_DUX_CROSS_BACKBONE__,
-        entityName: this.name,
-        entity: this.entity
-      });
+      this.dispatch(updateState(
+        this.name,
+        this.entity
+      ));
     }, {name, entity, dispatch: store.dispatch});
   }
 }
