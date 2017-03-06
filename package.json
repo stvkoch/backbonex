@@ -1,6 +1,6 @@
 {
   "name": "backbonex",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Backbone to Redux - Redux to Backbone",
   "main": "src/index.js",
   "repository": "github.com/stvkoch/backbonex",
