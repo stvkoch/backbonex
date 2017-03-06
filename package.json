@@ -4,7 +4,7 @@
   "description": "Backbone to Redux - Redux to Backbone",
   "main": "src/index.js",
   "repository": "github.com/stvkoch/backbonex",
-  "homepage": "github.com/stvkoch/backbonex",
+  "homepage": "https://github.com/stvkoch/backbonex",
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch"
